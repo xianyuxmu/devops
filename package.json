@@ -1,0 +1,22 @@
+{
+  "name": "devops",
+  "version": "1.0.0",
+  "description": "A DevOps process using GitHub, CircleCI & Docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xianyuxmu/devops.git"
+  },
+  "author": "Robin Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xianyuxmu/devops/issues"
+  },
+  "homepage": "https://github.com/xianyuxmu/devops#readme",
+  "dependencies": {
+    "koa": "^2.3.0"
+  }
+}
