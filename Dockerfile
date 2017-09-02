@@ -1,4 +1,4 @@
-# Set the base image to Ubuntu
+# Set the base image to CentOS, OFFICIAL REPOSITORY: https://hub.docker.com/_/centos/
 FROM centos:7
 
 MAINTAINER Robin Chen
