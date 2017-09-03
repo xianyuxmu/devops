@@ -1,7 +1,7 @@
 # Set the base image to CentOS, OFFICIAL REPOSITORY: https://hub.docker.com/_/centos/
 FROM centos:7
 
-MAINTAINER RobinChen
+MAINTAINER Robin Chen <xianyuxmu@gmail.com>
 
 # Install Node.js and other dependencies
 RUN yum update && \
