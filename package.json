@@ -4,6 +4,7 @@
   "description": "A DevOps process using GitHub, CircleCI & Docker",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "sh test/demo-test-script.sh"
   },
   "repository": {
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/xianyuxmu/devops#readme",
   "dependencies": {
-    "koa": "^2.3.0"
+    "bluebird": "^3.5.0",
+    "koa": "^2.3.0",
+    "redis": "^2.8.0"
   }
 }
