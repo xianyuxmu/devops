@@ -4,8 +4,7 @@ FROM centos:7
 MAINTAINER Robin Chen <xianyuxmu@gmail.com>
 
 # Install Node.js and other dependencies
-RUN yum update && \
-	yum install -y sudo && \
+RUN yum install -y sudo && \
     yum install -y git && \
     yum install -y gcc-c++ make && \
     curl --silent --location https://rpm.nodesource.com/setup_8.x | bash - && \
