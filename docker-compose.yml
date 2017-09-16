@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    image: xianyuxmu/bonjour-monde:latest
+    image: xianyuxmu/devops:latest
     deploy:
       replicas: 5
       resources:

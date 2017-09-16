@@ -1,12 +1,10 @@
 # Set the base image to CentOS, OFFICIAL REPOSITORY: https://hub.docker.com/_/centos/
-FROM centos:7
+FROM node:8.5.0-slim
 
 MAINTAINER Robin Chen <xianyuxmu@gmail.com>
 
 # Install Node.js and other dependencies
-RUN yum install -y sudo && \
-    curl --silent --location https://rpm.nodesource.com/setup_8.x | bash - && \
-    yum -y install nodejs
+# RUN yum install -y sudo
 
 # Install PM2
 # RUN npm install -g pm2
