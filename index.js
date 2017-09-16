@@ -1,15 +1,16 @@
 const Koa = require('koa');
 const app = new Koa();
-const os = require('os'),
-      hostname = os.hostname();
-var redis = require("redis");
+const os = require('os');
+let redis = require("redis");
 
 // You can also use node_redis with promises: https://github.com/NodeRedis/node_redis#promises
-var bluebird = require('bluebird');
+let bluebird = require('bluebird');
 bluebird.promisifyAll(redis.RedisClient.prototype);
 bluebird.promisifyAll(redis.Multi.prototype);
 
-var redisClient = redis.createClient();
+let redisClient = redis.createClient({
+  host: 'redis' // link to container: redis
+});
 let redisAvailable = false;
 const PORT = 3000;
 let visits = 0;
@@ -37,6 +38,9 @@ const getCache = async (key) => {
 
 app.use(async ctx => {
   console.log('A Request!');
+  
+  let hostname = os.hostname();
+
   try {
     if(redisAvailable) {
       redisClient.incr('visits');
