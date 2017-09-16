@@ -9,7 +9,7 @@ RUN yum install -y sudo && \
     yum -y install nodejs
 
 # Install PM2
-RUN npm install -g pm2
+# RUN npm install -g pm2
 
 RUN mkdir -p /opt/devops
 
@@ -24,5 +24,6 @@ RUN npm install
 EXPOSE 3000
 
 # Run app as fork mode
-CMD pm2 start index.js --name bonjour-monde --no-daemon
-# CMD node -v && node index.js
+
+# CMD pm2 start index.js --name bonjour-monde --no-daemon
+CMD node -v && node index.js
