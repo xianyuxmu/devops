@@ -47,9 +47,11 @@ app.use(async ctx => {
     visits = 'Redis Error!';
     console.log('redisClient.incr() Error: ', e);
   }
-  
+  ctx.type = 'html';
+  ctx.body = `<h3>Bonjour Monde! </h3>
+              <p>Hostname: <b style="color: red;">${hostname}</b></p>
+              <p>Site visits from Redis: <b style="color: red;">${visits}</b></p>`;
 
-  ctx.body = `Bonjour Monde! Hostname: ${hostname}, site visits from Redis: ${visits}`;
 });
 
 console.log('APP START!!! App is running on port: ', PORT);
