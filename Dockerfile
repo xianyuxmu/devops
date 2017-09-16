@@ -1,5 +1,5 @@
 # Set the base image to CentOS, OFFICIAL REPOSITORY: https://hub.docker.com/_/centos/
-FROM node:8.5.0-slim
+FROM node:8.5.0-alpine
 
 MAINTAINER Robin Chen <xianyuxmu@gmail.com>
 
