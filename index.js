@@ -9,7 +9,9 @@ bluebird.promisifyAll(redis.RedisClient.prototype);
 bluebird.promisifyAll(redis.Multi.prototype);
 
 let redisClient = redis.createClient({
-  host: 'redis' // link to container: redis
+  host: process.env.NODE_ENV === 'dev'
+        ? '' // use default: 127.0.0.1
+        : 'redis' // link to container: redis
 });
 let redisAvailable = false;
 const PORT = 3000;

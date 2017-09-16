@@ -4,7 +4,7 @@
   "description": "A DevOps process using GitHub, CircleCI & Docker",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "NODE_ENV=dev node index.js",
     "test": "sh test/demo-test-script.sh"
   },
   "repository": {
